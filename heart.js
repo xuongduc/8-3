@@ -5,7 +5,7 @@ heart.addEventListener("click", (clicked));
 
 
 function getIntRand(start, end){
-    return Math.round(Math.random() * end) - start + 30;
+    return Math.round(Math.random() * end) - start ;
 }
 
 function clicked(){
