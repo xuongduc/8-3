@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #0b1522;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#test{
+    width: 50px;
+    height: 50px;
+    background-color: aliceblue;
+}
+
+#main_heart{ 
+    width: 50px;
+    height: 50px;
+    background: red;
+    transform: rotate(-45deg);
+    position: relative ;
+    box-shadow: 10px  10px 50px red;
+    animation: heart 1s linear infinite;
+}
+
+@keyframes heart {
+    0%{
+        transform: rotate(-45deg) scale(1.1);
+    }
+    80%{
+        transform: rotate(-45deg) scale(1.3);
+    }
+    100%{
+        transform: rotate(-45deg) scale(1);
+    }
+
+}
+
+#main_heart::before{
+    content: " ";
+    position: absolute;    
+    width: 50px;
+    height: 50px;
+    background: red;
+    top: -50%; 
+    border-radius: 100px;
+    box-shadow: -10px  -10px 50px red;
+
+}
+#main_heart::after{
+    content: " ";
+    position: absolute;    
+    width: 50px;
+    height: 50px;
+    background: red;
+    right: -50%; 
+    border-radius: 100px;
+    box-shadow: -10px  10px 50px red;
+ 
+}
+
+
+span{
+    background-image: url("./heart.png");
+    background-size: cover;
+    position: absolute;
+    width: 90px;
+    height: 82px;
+    animation: sub 4s linear infinite;
+}
+
+@keyframes sub {
+    0%{
+        opacity: 0;
+        transform: rotate(-45deg);
+    }
+    15%{
+        opacity: 1;
+    }
+    50%{
+        transform: rotate(45deg);       
+    }
+    95%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
