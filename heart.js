@@ -13,8 +13,8 @@ function clicked(){
     song.play();
     for (let i = 0; i < 60; i++){
         let sub_heart = document.createElement("span");
-        sub_heart.style.left = getIntRand(1, 1000) + 'px';
-        sub_heart.style.top = getIntRand(1, 1000) + 'px';
+        sub_heart.style.left = getIntRand(1, window.innerWidth) + 'px';
+        sub_heart.style.top = getIntRand(1, window.innerHeight) + 'px';
         document.querySelector("body").appendChild(sub_heart)
         setTimeout(function(){
             sub_heart.remove();
